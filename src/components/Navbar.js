@@ -6,8 +6,18 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import '../App.css';
+import { useNavigate } from 'react-router-dom';
 
 const Navbarcomp =()=>{
+  const navigate = useNavigate();
+
+  const navigateToLogin =()=>{
+    navigate("/login");
+  }
+
+  const navigateToSignup =() =>{
+    navigate("/signup");
+  }
     return(
         <div>
 
@@ -41,8 +51,8 @@ const Navbarcomp =()=>{
               className="me-2"
               aria-label="Search"
             />
-            <Button className = "loginbutton">Login</Button>
-            <Button className="signinbutton">Signin</Button>
+            <Button className = "loginbutton"  onClick= {navigateToLogin}>Login</Button>
+            <Button className="signinbutton" onClick= {navigateToSignup}>Signup</Button>
           </Form>
         </Navbar.Collapse>
       </Container>

@@ -1,9 +1,8 @@
 body{
-    height: 1000px;
+    height: 500px;
 }
 .mainnavbar{
     background-color: black;
-    position: fixed;
     width:100%;
     margin: 0px;
 }
